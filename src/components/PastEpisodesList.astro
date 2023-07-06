@@ -1,9 +1,50 @@
-
-
-<ul class="space-y-8 md:space-y-5 mt-12">
-  
-      <li class="space-y-1 md:space-y-0">
-        woohoo
-      </li>
+<style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/phosphor-icons/0.1.8/phosphor-icons.min.css');
     
-</ul>
+    .space-y-4 li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+    }
+    
+    .space-y-4 li:hover {
+      color: #555;
+    }
+    
+    .space-y-4 li::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #555;
+      border-radius: 50%;
+    }
+  </style>
+  
+  <ul class="space-y-4 ">
+    <li>
+      <span class="underline underline-offset-2 hover:underline-offset-4 transition-[text-underline-offset] cursor-pointer">Software Intern, essentia.dev</span>
+      <i class="ph-arrow-right text-green-900"></i>
+    </li>
+    <li>
+      <span class="underline underline-offset-2 hover:underline-offset-4 transition-[text-underline-offset] cursor-pointer">Product Head, pFinTools.com</span>
+      <i class="ph-arrow-right text-green-900"></i>
+    </li>
+    <li>
+      <span class="underline underline-offset-2 hover:underline-offset-4 transition-[text-underline-offset] cursor-pointer">Assistant Organizer, FOSS United</span>
+      <i class="ph-arrow-right text-green-900"></i>
+    </li>
+    <li>
+        <span class="underline underline-offset-2 hover:underline-offset-4 transition-[text-underline-offset] cursor-pointer">Technical member, Alexa Developers SRM</span>
+        <i class="ph-arrow-right text-green-900"></i>
+    </li>
+    <li>
+        <span class="underline underline-offset-2 hover:underline-offset-4 transition-[text-underline-offset] cursor-pointer">Volunteer- ChennaiFOSS,pyCon India, CityJSConfIndia, HackThisFall</span>
+        <i class="ph-arrow-right text-green-900"></i>
+    </li>
+  </ul>
+  
