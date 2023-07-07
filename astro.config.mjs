@@ -6,5 +6,4 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://ansharora28.github.io',
-  base: '/ansharora.dev',
 });
