@@ -3,7 +3,7 @@ import Link from "../components/Link.astro";
 import PageSection from "../layouts/PageSection.astro";
 import SectionHeading from "./SectionHeading.astro";
 
-const FRAPPEVERSE_LINKS = {
+const MY_LINKS = {
   Projects: [
     { title: "NextJS + Sanity Blog", link: "https://github.com/ansharora28/blog-project" },
     { title: "pFinTools.com", link: "https://www.pfintools.com" },
@@ -28,27 +28,28 @@ const FRAPPEVERSE_LINKS = {
   ["Come Say Hi!"]: [
     
     {
-      title: "KCD Chennai Conference (July 22)",
-      link: "https://kcdchennai.in",
-    },
-    {
-      title: "Linux Installation Party (July 30)",
-      link: "https://forum.fossunited.org/t/foss-meetup-chennai-linux-installation-party-july-2023/2178",
-    },
-    {
       title: "LocalStack X MongoDB User Group Meetup ( August 5)",
       link: "https://konfhub.com/mongodb-localstack-meetup",
     },
     {
-      title: "FOSS United Monthly Meetup (August)",
+      title: "WomenTechMakers X FOSS United Chennai Meetup (26 August)",
       link: "http://t.me/fossunitedchennai",
-    }
+    },
+    {
+      title: "CityJS New Delhi (September 15-16)",
+      link: "https://india.cityjsconf.org/",
+    },
+    {
+      title: "IndiaFOSS 3.0 (October 28-29)",
+      link: "https://indiafoss.net/"
+    },
+
   ],
 };
 ---
 <PageSection>
   <div class="mt-12 space-y-24 md:grid md:grid-cols-2 xl:grid-cols-3 md:items-start md:justify-between md:space-y-0 md:gap-y-14 md:gap-x-14">
-    {Object.keys(FRAPPEVERSE_LINKS).map((category) => (
+    {Object.keys(MY_LINKS).map((category) => (
       <div class="space-y-8 col-span-1">
         <div class="flex items-center space-x-3">
           <h3 class="uppercase text-green-900 font-bold text-sm hover:text-blue-500">
@@ -59,7 +60,7 @@ const FRAPPEVERSE_LINKS = {
         </div>
 
         <div class="space-y-4">
-          {FRAPPEVERSE_LINKS[category].map((link) => (
+          {MY_LINKS[category].map((link) => (
             <div class="hover:text-blue-500 transition-colors">
               <a
                 href={link.link}
