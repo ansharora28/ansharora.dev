@@ -6,9 +6,7 @@
     <title>FOSS Club SRM Contact Form</title>
     <!-- Include the Tailwind CSS CDN link here -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles specific to this page can be added here */
-    </style>
+    
 </head>
 <body class="bg-gray-200">
     <div class="container mx-auto mt-8 p-4">
@@ -102,19 +100,40 @@
                 </fieldset>
             </div>
             <div class="mb-4">
+                <label for="contribution" class="block text-gray-600 font-semibold mb-1">How can you contribute to FOSS Club SRM?</label>
+                <textarea id="contribution" class="form-textarea border-2 border-gray-300 rounded-md p-2 w-full" required name="contribution" rows="4" ></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="experience" class="block text-gray-600 font-semibold mb-1">Do you have any prior experience in managing student communities/clubs?</label>
+                <textarea id="experience" class="form-textarea border-2 border-gray-300 rounded-md p-2 w-full" required name="experience" rows="4" ></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="expectations" class="block text-gray-600 font-semibold mb-1">What are your expectations from the club? What are you hoping to learn from this experience?</label>
+                <textarea id="expectations" class="form-textarea border-2 border-gray-300 rounded-md p-2 w-full" required name="expectations" rows="4" ></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="questions" class="block text-gray-600 font-semibold mb-1">Do you have any questions for us?</label>
+                <textarea id="questions" class="form-textarea border-2 border-gray-300 rounded-md p-2 w-full" required name="questions" rows="4" ></textarea>
+            </div>
+            <div class="mb-4">
                 <label for="confirmation" class="block text-gray-600 font-semibold mb-1">
                     <input id="confirmation" type="checkbox" required>
                     I have gone through the structure and shared resources.
-                </label>
+                </label>                
+            </div>
+            <div class="mb-4">
                 <label for="privacy" class="block text-gray-600 font-semibold mb-1">
                     <input id="confirmation" type="checkbox" required>
                     I consent to sharing my information with the FOSS Club leadership in order to evaluate my application.
                 </label>
-                <label for="privacy" class="block text-gray-600 font-semibold mb-1">
+            </div>
+            <div class="mb-4">
+                <label for="acknowledgement" class="block text-gray-600 font-semibold mb-1">
                     <input id="confirmation" type="checkbox" required>
                     I acknowledge that submitting this form does not guarantee selection.
                 </label>
             </div>
+            <p>P.S - Your data will be rightfully deleted from our records once the application process is complete.</p>
             
             
             <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-full w-full">
