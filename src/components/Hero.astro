@@ -1,24 +1,36 @@
-<section class="bg-white w-full">
-    <div
-      class="w-full px-8 md:max-w-7xl md:mx-auto md:px-24 pb-5 pt-10 md:pt-32 md:flex md:flex-row-reverse md:justify-between md:items-center"
-    >
-      <a href="/">
-        <img src="/foss.png" alt="hero logo" class="w-[100px] h-[100px] mb-20 md:mb-0" />
-      </a>
-  
-      <div class="space-y-3">
-        <a
-          href=""
-          target="_blank"
-          class="text-xl md:text-3xl font-semibold text-green-600"
-        >
-          This is Ansh
-        </a>
-        <h1
-          class="text-green-900 font-semibold text-4xl md:font-medium md:text-5xl md:leading-none"
-        >
-          Evangelist by day. Developer by night
-        </h1>
+---
+import {
+Astronav,
+MenuItems,
+MenuIcon,
+Dropdown,
+DropdownItems,
+DropdownSubmenu,
+} from "astro-navbar";
+---
+<header class="lg:flex justify-between p-5 gap-5 mx-auto container">
+   <Astronav closeOnClick>
+      <div class="flex w-full lg:w-auto justify-between">
+         <a>Ansh Arora</a>
+         <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-gray-800" />
+         </div>
       </div>
-    </div>
-  </section>
+      <MenuItems class="hidden lg:flex">
+         <ul class="flex flex-col lg:flex-row lg:gap-5">
+            <li>
+               <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Talks</a>
+           </li>
+            <li>
+               <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+           </li>
+         </ul>
+      </MenuItems>
+   </Astronav>
+</header>
