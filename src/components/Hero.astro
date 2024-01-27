@@ -6,29 +6,43 @@ MenuIcon,
 } from "astro-navbar";
 ---
 <header class="bg-white lg:flex lg:justify-between lg:items-center p-5 gap-5 mx-auto container text-lg md:text-xl font-normal">
-  <Astronav closeOnClick>
-     <div class="flex w-full lg:w-auto justify-between items-center sm:justify-center">
-        <a class="text-gray-800 font-bold text-xl lg:text-2xl lg:ml-0">Ansh Arora</a>
-        <div class="block lg:hidden">
-           <MenuIcon class="w-6 h-6 text-gray-800 cursor-pointer" />
-        </div>
-     </div>
-     <MenuItems class="hidden lg:flex lg:items-center">
-        <ul class="flex flex-col lg:flex-row lg:gap-5">
-           <li>
-              <a href="#" class="text-gray-800 hover:text-green-500">Home</a>
-           </li>
-           <li>
-              <a href="https://youtube.com/playlist?list=PLwwzJxp9WxvvIlWk6t3Nw6R8CmFlSd932&si=zA5MUA_gPrD_pFsQ" class="text-gray-800 hover:text-green-500">Talks</a>
-           </li>
-           <li>
-              <a href="/projects" class="text-gray-800 hover:text-green-500">Projects</a>
-           </li>
-           <li>
-              <a href="/blog" class="text-gray-800 hover:text-green-500">Blog</a>
-           </li>
-        </ul>
-     </MenuItems>
-  </Astronav>
-</header>
+   <Astronav closeOnClick>
+      <div class="flex w-full lg:w-auto justify-between items-center sm:justify-center">
+         <a class="text-xl lg:text-2xl lg:ml-0 transition-all duration-1000 animate-color-change">Ansh Arora</a>
+         <div class="block lg:hidden">
+            <MenuIcon class="w-6 h-6 text-gray-800 cursor-pointer" />
+         </div>
+      </div>
+      <MenuItems class="hidden lg:flex lg:items-center">
+         <ul class="flex flex-col lg:flex-row lg:gap-5">
+            <li>
+               <a href="#" class="text-gray-800 hover:text-green-500">Home</a>
+            </li>
+            <li>
+               <a href="https://youtube.com/playlist?list=PLwwzJxp9WxvvIlWk6t3Nw6R8CmFlSd932&si=zA5MUA_gPrD_pFsQ" class="text-gray-800 hover:text-green-500">Talks</a>
+            </li>
+            <li>
+               <a href="/projects" class="text-gray-800 hover:text-green-500">Projects</a>
+            </li>
+            <li>
+               <a href="/blog" class="text-gray-800 hover:text-green-500">Blog</a>
+            </li>
+         </ul>
+      </MenuItems>
+   </Astronav>
+ </header>
+ 
 
+<style>
+   @keyframes change-color {
+  0% { color: red; }
+  25% { color: blue; }
+  50% { color: green; }
+  75% { color: orange; }
+  100% { color: purple; }
+}
+
+.animate-color-change {
+  animation: change-color 5s infinite;
+}
+</style>
