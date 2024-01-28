@@ -20,7 +20,7 @@ import SectionHeading from "../components/SectionHeading.astro";
         <li>
           <a href={post.url} class="block hover:underline p-4 rounded-lg shadow-md bg-white transition duration-300 transform hover:scale-105 hover:shadow-lg">
             <h2 class="text-lg font-semibold text-gray-800 mb-2 hover:text-blue-600">{post.frontmatter.title}</h2> {/* Title font size and color */}
-            <p class="text-sm text-gray-600 mb-1">{post.frontmatter.pubDate}</p> {/* Date font size and color */}
+            <p class="text-sm text-gray-600 mb-1">{new Date(post.frontmatter.pubDate).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</p> {/* Date font size and color */}
             <p class="text-sm text-gray-700">{post.frontmatter.description}</p> {/* Description font size and color */}
           </a>
         </li>
