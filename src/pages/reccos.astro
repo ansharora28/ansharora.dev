@@ -3,31 +3,165 @@ import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/footer.astro";
 import PageSection from "../layouts/PageSection.astro";
-import Recommendation from "../components/Recommendation.astro";
 ---
 
 <Layout title="Recommendations">
   <Hero />
-
   <PageSection>
-    <h1 class="text-black text-base font-semibold md:text-2xl">Recommended Books</h1>
-    <Recommendation type="book" title="Book Title 1" author="Author Name 1" />
-    <Recommendation type="book" title="Book Title 2" author="Author Name 2" />
-    <!-- Add more book recommendations as needed -->
+    <p class="text-gray-600 text-sm mb-4">Disclaimer: Art is subjective, but my taste is objectively superior.</p>
+  </PageSection>
+  <PageSection>
+    <h2 class="text-black text-lg md:text-xl font-semibold">Books</h2><br>
+    <h3 class="text-black text-base font-semibold md:text-lg">Fiction</h3><br>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Kite Runner</h4>
+      <p class="text-gray-600">Author: Khaled Hosseini</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Book Thief</h4>
+      <p class="text-gray-600">Author: Markus Zusak</p>
+    </div>
+    <br>
+    <h3 class="text-black text-base font-semibold md:text-lg">Non Fiction</h3>
+    <p class="text-gray-600">Outside of novels, I like to read about businesses, productivity, and management</p>
+    <br>
+    <div class="recommendation">
+      <h4 class="text-xl">Zero To One</h4>
+      <p class="text-gray-600">Author: Peter Thiel</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Hard Thing About Hard Things</h4>
+      <p class="text-gray-600">Author: Ben Horowitz</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Ikigai</h4>
+      <p class="text-gray-600">Author: Hector Garcia Puigcerver</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">How Will You Measure Your Life?</h4>
+      <p class="text-gray-600">Author: Clayton M. Christensen</p>
+    </div>
   </PageSection>
 
   <PageSection>
-    <h1 class="text-black text-base font-semibold md:text-2xl">Recommended Movies</h1>
-    <Recommendation type="movie" title="Movie Title 1" director="Director Name 1" />
-    <Recommendation type="movie" title="Movie Title 2" director="Director Name 2" />
+    <h2 class="text-black text-lg md:text-xl font-semibold">Movies</h2>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Good Will Hunting</h4>
+      <p class="text-gray-600">Director: Gus Van Sant</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Dead Poets Society</h4>
+      <p class="text-gray-600">Director: Peter Weir</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Everything Everywhere All At Once</h4>
+      <p class="text-gray-600">Director: Daniel Kwan, Daniel Scheinert</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Cmon Cmon</h4>
+      <p class="text-gray-600">Director: Mike Mills</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Social Network</h4>
+      <p class="text-gray-600">Director: David Fincher</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Taare Zameen Par</h4>
+      <p class="text-gray-600">Director: Aamir Khan</p>
+    </div>
     <!-- Add more movie recommendations as needed -->
   </PageSection>
 
   <PageSection>
-    <h1 class="text-black text-base font-semibold md:text-2xl">Recommended Podcasts</h1>
-    <Recommendation type="podcast" title="Podcast Title 1" host="Host Name 1" />
-    <Recommendation type="podcast" title="Podcast Title 2" host="Host Name 2" />
+    <h2 class="text-black text-lg md:text-xl font-semibold">TV Shows</h2>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Silicon Valley</h4>
+      <p class="text-gray-600">Creators: Mike Judge, John Altschuler, Dave Krinsky</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Over the Garden Wall</h4>
+      <p class="text-gray-600">Creators: Patrick McHale</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Succession</h4>
+      <p class="text-gray-600">Creators: Jesse Armstrong</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Office</h4>
+      <p class="text-gray-600">Creators: Greg Daniels, Ricky Gervais, Stephen Merchant</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Bojack Horseman</h4>
+      <p class="text-gray-600">Creator: Raphael Bob-Waksberg</p>
+    </div>
+    <!-- Add more TV show recommendations as needed -->
+  </PageSection>
+
+  <PageSection>
+    <h2 class="text-black text-lg md:text-xl font-semibold">Podcasts</h2>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Acquired: Every company has a story</h4>
+      <p class="text-gray-600">Host: David Rosenthal, Ben Gilbert</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">WTF with Nikhil Kamath</h4>
+      <p class="text-gray-600">Host: Nikhil Kamath</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Lex Fridman Podcast</h4>
+      <p class="text-gray-600">Host: Lex Fridman</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">The Happiness Lab</h4>
+      <p class="text-gray-600">Host: Dr. Laurie Santos</p>
+    </div>
     <!-- Add more podcast recommendations as needed -->
+  </PageSection>
+
+  <PageSection>
+    <h2 class="text-black text-lg md:text-xl font-semibold">Standup Specials</h2>
+
+    <div class="recommendation">
+      <h4 class="text-xl">X, Dark</h4>
+      <p class="text-gray-600">Daniel Sloss</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Nanette</h4>
+      <p class="text-gray-600">Hannah Gadsby</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Cold Lasagne Hate Myself 1999</h4>
+      <p class="text-gray-600">James Acaster</p>
+    </div>
+
+    <div class="recommendation">
+      <h4 class="text-xl">Middlewitch and Schwartz (improv)</h4>
+      <p class="text-gray-600">Thomas Middleditch and Ben Schwartz</p>
+    </div>
+
+    <!-- Add more standup specials as needed -->
   </PageSection>
 
   <Footer />
