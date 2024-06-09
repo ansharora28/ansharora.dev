@@ -45,9 +45,6 @@ Ansh
 Talking about FOSS United at CityJS Conf. India
 
 <br><br>
-![Diversity Scholarships](/diversity.png)
-Proposal for Diversity Scholarships at IndiaFOSS. 
-<br><br>
 ![IndiaFOSS volunteers](/teamIF3.jpeg)
 At IndiaFOSS 3.0 
 <br><br>
