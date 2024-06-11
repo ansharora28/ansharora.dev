@@ -1,6 +1,4 @@
 ---
-
-
 export interface Props {
   title: string;
 }
@@ -12,15 +10,12 @@ const { title } = Astro.props;
 <html lang="en" class="antialiased bg-white">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Ansh's official website :)"
-    />
+    <meta name="description" content="Ansh's official website :)" />
     <meta name="title" content="Get to know Ansh!" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/duck.svg" />
 
-    <!-- add og image -->
+    <!-- Open Graph meta tags for social sharing -->
     <meta property="og:image" content="/og-image.png" />
     <meta property="og:title" content="Know more about Ansh!" />
     <meta name="image" content="/og-image.png" />
@@ -30,11 +25,12 @@ const { title } = Astro.props;
     <script src="https://kit.fontawesome.com/c4a9203f07.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
 
+    <!-- Import Google Fonts -->
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+    </style>
   </head>
   <body>
     <slot />
   </body>
 </html>
-<style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
-</style>
