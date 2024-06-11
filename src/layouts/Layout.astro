@@ -1,23 +1,24 @@
 ---
 export interface Props {
   title: string;
+  description?: string; // Add description as an optional prop
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="antialiased bg-white">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Ansh's official website :)" />
-    <meta name="title" content="Get to know Ansh!" />
+    <meta name="description" content={description || "Ansh's official website :)"} /> <!-- Use the description prop -->
+    <meta name="title" content={title ? `${title} - Get to know Ansh!` : "Get to know Ansh!"} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/duck.svg" />
 
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:image" content="/og-image.png" />
-    <meta property="og:title" content="Know more about Ansh!" />
+    <meta property="og:title" content={title ? `${title} - Know more about Ansh!` : "Know more about Ansh!"} /> <!-- Use title for og:title -->
     <meta name="image" content="/og-image.png" />
 
     <meta name="generator" content={Astro.generator} />
