@@ -1,0 +1,45 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+const postTitle = "What I read this week #1";
+const postSlug = "1";
+const postDate = "2024-07-06";
+const postDescription = "Interesting reads from the past week - June 6th, 2024";
+
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <h2>
+        <u>
+            <a 
+            href="https://www.nytimes.com/2005/06/05/magazine/monkey-business.html"
+            style="color: blue">
+            Monkey Business
+            </a>
+        </u>
+    </h2>
+    <br>
+    <p>
+        An economist from Yale's experiment of introducing money to monkeys.
+        <br>
+        Find the complete study <a href="https://www.jstor.org/stable/10.1086/503550?read-now=1" style="color: blue">here</a> <br><br>
+        Here's a video explainer
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/J8449HgS3FM?si=aV4Zh7Aa4P2nE-5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        
+    </p>
+  </PageSection>
+  <Footer />
+</Layout>
