@@ -1,0 +1,87 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+const postTitle = "What I read this week #2";
+const postSlug = "1";
+const postDate = "2024-07-14";
+const postDescription = "Interesting reads from the past week - July 14th, 2024";
+
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <h2>
+        <u>
+            <a 
+            href=""
+            style="color: blue">
+            title
+            </a>
+        </u>
+    </h2>
+    <br>
+    <p>
+      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
+      <br>
+      description 1
+      <br>
+      description 2
+    </p>
+    <br>
+    <hr>
+    <h2>
+      <u>
+          <a 
+          href=""
+          style="color: blue">
+          title
+          </a>
+      </u>
+  </h2>
+  <br>
+  <p>
+    description
+  </p>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a 
+          href=""
+          style="color: blue">
+          title
+      </a></u>
+  </h2>
+  <br>
+  <p>
+    description
+  </p>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a 
+          href=""
+          style="color: blue">
+          title 
+      </a></u>
+  </h2>
+  <br>
+  <p>
+    description
+    <br><br>
+    description
+ </p>    
+  </PageSection>
+  <Footer />
+</Layout>
