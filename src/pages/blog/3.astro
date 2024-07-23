@@ -1,0 +1,89 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+const postTitle = "What I read this week #3";
+const postSlug = "1";
+const postDate = "2024-07-21";
+const postDescription = "Interesting reads from the past week - July 21th, 2024";
+
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <h2>
+        <u>
+            <a 
+            href="https://publiccode.eu/en/"
+            style="color: blue">
+            Public Money Public Code
+            </a>
+        </u>
+    </h2>
+    <br>
+    <p>
+      <br>
+      "Why is software created using taxpayers' money not released as Free Software? 
+      <br>
+      We want legislation requiring that publicly financed software developed for the public sector be made publicly available under a Free and Open Source Software licence. If it is public money, it should be public code as well.
+      Code paid by the people should be available to the people!"
+    </p>
+    <br>
+    <hr>
+    <h2>
+      <u>
+          <a 
+          href="https://www.nytimes.com/2024/06/24/business/media/netflix-corporate-culture.html"
+          style="color: blue">
+          Responsibility Over Freedom: How Netflix's Culture Has Changed
+          </a>
+      </u>
+  </h2>
+  <br>
+  <p>
+    The company's latest internal memo about its corporate culture is more about how it expects employees to behave than what it wants to become.
+  </p>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a 
+          href="https://state-of-foss.in/"
+          style="color: blue">
+          The state of Free and Open Source Software in India
+      </a></u>
+  </h2>
+  <br>
+  <p>
+    India is well positioned to become a vibrant hub for FOSS innovations. In India, 4G data subscribers have recently crossed more than 598 million of which 96% of them access the digital world via open-source based mobile operating systems 
+  </p>
+  <p>
+    However, India still lags behind the global landscape in building sustainable home-grown projects and needs a strategic plan to incubate and proliferate domestic FOSS innovations worldwide.
+  </p>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a 
+          href="https://www.scientificamerican.com/article/for-math-fans-a-hitchhikers-guide-to-the-number-42/"
+          style="color: blue">
+          For Math Fans: A Hitchhiker's Guide to the Number 42
+      </a></u>
+  </h2>
+  <br>
+  <p>
+    How a perfectly ordinary number captured the interest of sci-fi enthusiasts, geeks and mathematicians
+    
+ </p>    
+  </PageSection>
+  <Footer />
+</Layout>
