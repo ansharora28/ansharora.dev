@@ -1,0 +1,74 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+const postTitle = "What I read this week #4";
+const postSlug = "4";
+const postDate = "2024-07-28";
+const postDescription = "Interesting reads from the past week - July 28th, 2024";
+
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <h2>
+        <u>
+            <a 
+            href="https://www.youtube.com/watch?v=Hj9oB4zpHww"
+            style="color: blue">
+            Science can answer moral questions
+            </a>
+        </u>
+    </h2>
+    <br>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Hj9oB4zpHww?si=W4hYwyVcGwWCTyVl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      <br>
+        Questions of good and evil, right and wrong are commonly thought unanswerable by science.
+      <br>
+      But Sam Harris argues that science can -- and should -- be an authority on moral issues, shaping human values and setting out what constitutes a good life.
+    </p>
+    <br>
+    <hr>
+    <h2>
+      <u>
+          <a 
+          href="https://www.nytimes.com/1999/09/05/magazine/the-singer-solution-to-world-poverty.html"
+          style="color: blue">
+          The Singer Solution To World Poverty
+          </a>
+      </u>
+  </h2>
+  <br>
+  <p>
+    The Australian philosopher Peter Singer is perhaps the world's most controversial ethicist.
+    <br>
+    Singer offers some unconventional thoughts about the ordinary American's obligations to the world's poor.
+  </p>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a 
+          href="https://uxdesign.cc/the-accidental-tyranny-of-user-interfaces-eef15dc555a0"
+          style="color: blue">
+          The accidental tyranny of user interfaces
+      </a></u>
+  </h2>
+  <br>
+  <p>
+    The potential of technology to empower is being subverted by tyrannical user interface design, enabled by our data and attention.
+  </p>
+  <br>
+  <hr>
+  </PageSection>
+  <Footer />
+</Layout>
