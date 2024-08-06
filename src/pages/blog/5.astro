@@ -1,0 +1,90 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+const postTitle = "What I read this week #5";
+const postSlug = "1";
+const postDate = "2024-07-14";
+const postDescription = "Interesting reads from the past week - August 3rd, 2024";
+
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <h2>
+        <u>
+            <a 
+            href="https://www.youtube.com/watch?v=wupToqz1e2g"
+            style="color: blue">
+            Carl Sagan - Pale Blue Dot
+            </a>
+        </u>
+    </h2>
+    <br>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wupToqz1e2g?si=MAWJ-4u6pg882kWz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      <br>
+      "In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves."
+      <br>
+      
+    </p>
+    <br>
+    <hr>
+    <h2>
+      <u>
+          <a 
+          href="https://theprint.in/tech/how-3-non-techie-women-are-helping-fight-fear-of-technology-among-indian-non-profits/706412/"
+          style="color: blue">
+          How 3 non-techie women are helping fight fear of technology among Indian non-profits
+          </a>
+      </u>
+  </h2>
+  <br>
+  <p>
+    Rinju Rajan, Anusha Meher Bhargava, and Akhila Somanath, three women from different parts of India, are not techies. But technology - and its potential power as a positive force - is the lifeblood that drives their work now.
+  </p>
+  <br>
+  <p>
+    Related (and strongly recommended!) watch - 
+  </p><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SBw2AqM_teo?si=ZJaaXclbTPaL9Noc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a 
+          href="https://wtfhappenedin1971.com/"
+          style="color: blue">
+          WTF happened in 1971?
+      </a></u>
+  </h2>
+  <br>
+  <p>
+    A compilation of statistics that show how the course of economic history changed in 1971.
+  </p>
+  <br>
+  <hr>
+  <h2>
+    <u>
+      <a href="https://www.marginalia.nu/log/a_108_feynman_revisited/"
+          style="color: blue">
+            Feynman revisited
+      </a>
+    </u>
+  </h2>
+  <br>
+  <p>
+    Feynman algorithm: the trick to problem solving
+    <br><br>
+ </p>    
+  </PageSection>
+  <Footer />
+</Layout>
