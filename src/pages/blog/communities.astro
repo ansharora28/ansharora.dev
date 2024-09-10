@@ -1,0 +1,151 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+// Define the metadata for the blog post
+const postTitle = "Reflections on IndiaFOSS 2024";
+const postSlug = "indiafoss-2024";
+const postDate = "2024-09-09";
+const postDescription = "flow, a festival and pale blue dot.";
+
+// // Use the metadata in the front matter
+// export const metadata = {
+//   title: postTitle,
+//   description: postDescription,
+//   date: postDate,
+//   slug: postSlug,
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <p> IndiaFOSS 2024 is the fourth edition of the annual Free and Open Source Software conference organised by the FOSS United Foundation, which I've been lucky to be a part of. </p>
+    <br />
+    <p>This post is a reflection on the event (and all that went behind it), its impact on me, some thoughts about FOSS United, and what's next.</p>
+    <br />
+    <h1 class="text-black text-base font-semibold md:text-2xl">Me</h1>
+    <br />
+    <p>It's been more than a year since I've been an active part of the FOSS United Community (and later the foundation). In more ways than one, this young organisation has changed me as a person.
+    </p> <br>
+    <p>  I am someone who has had very less exposure outside the 4 walls of my hostel room. To this day, when I'm in a big gathering, I take out my phone and keep looking at it mindlessly so people don't come and talk to me. So I find it really funny when people ask me if I like my job and what my favourite part about it is. (it's people!)
+    </p><br>
+    <h1 class="text-black text-base font-semibold md:text-2xl">The Project</h1>
+    <br />
+    <p>A day before IndiaFOSS 3.0 <a href="wisharya.com" style="color: blue;">Vishal</a> and Riya pitched to me Project Maansh (Mangesh+Ansh). The name wasn't even the most ridiculous part about this project, the idea that two socially anxious teenagers (I was 19 then!) will lead the foundation's most prized project was just absurd.
+    </p>
+    <br />
+    <p>Regardless, we agreed. As months passed, I saw <a href="https://mangeshm.xyz/" style="color: blue;"> Mangesh</a> (and then Riya) moving into tech full time. His disdain for communities in general was starting to grow. And rightfully so, open source communities are a hot mess.
+    </p>
+    <br />
+    <p>For a brief while, I started reconsidering my choices. I mean, there has to be something about IndiaFOSS, this "celebration", that has scarred people so much that they didn't want to be a part of it again. I felt scared, and alone.
+    </p>
+    <br />
+    <p>As <a href="https://rahulporuri.github.io/" style="color: blue;"> Rahul</a> might say, we at FOSS United do things because they need to be done. We started planning IndiaFOSS 2024 in March the next year. It's almost astonishing how thoroughly Vishal now knows the minute details of these events. In a one hour call, he had helped me lay down the entire roadmap for the conference.
+    </p><br>
+    <h1 class="text-black text-base font-semibold md:text-2xl">The Prep</h1>
+    <br />
+    <p>It was pretty simple honestly. We had to improve on everything that went wrong last year, we needed to sell more tickets, we needed to improve the talks, we needed to create an experience for everyone, we need to get more sponsors, we need to..shut up and start working.
+    </p>
+    <br />
+    <p>I now understand Rahul's push for documenting our programs. While IndiaFOSS 3.0 was not very well documented from the team's end, at least the feedback and people's commentary on the event was very easy to find. I knew where we fell short and what could be improved.
+    </p>
+    <br />
+    <p>We were able to retain a lot of volunteers from older events and I felt confident in the team that was going to spend the next few weeks making this conference a reality.
+    </p>
+    <br />
+    <p>For the sake of this post not becoming an organisers' handbook, I will save my learnings from planning this event for a seperate blog post.
+    </p>
+    <br />
+    <p>Weeks passed, and my anxiety was growing. We had been doing well so far. I was very happy with the talks, sponsorships, logistics but there was still one thing left to figure out.
+    </p>
+    <br />
+    <blockquote style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      Maybe it was my own state of mind, but I felt the first day was very disconnected. Things did not seem to flow.
+    </blockquote>
+    <br />
+    <p>I really related to Rushabh's <a href="https://rushabh-mehta.medium.com/reflections-from-indiafoss-3-0-ad03f01ddecf" style="color: blue;"> post about IndiaFOSS 3.0 </a>. It was just too chaotic on the inside, and while the audience didn't seem to notice, he somehow caught it early on. I reached out to him asking if he had any ideas on how we could improve.
+    </p>
+    <br />
+    <blockquote style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      I don't know man - It's a tough one.
+    </blockquote>  
+    
+    <br />
+    <p>Diversity at the conference is of no use if people don't feel welcome at the event. For a conference like ours, you have to make a choice every 15 minutes. Which talk/session/booth do you go to? I wanted people to continue making these (and possibly even harder) choices. But at the same time, I didn't want anyone to feel disconnected, miss sessions they wanted to attend, not know there was something at the event curated just for them.
+    </p>
+    <br />
+    <p>I opened up a google doc (sorry, mangesh) and started brainstorming. I then spent a lot of time talking to the team and volunteers on how to solve this problem. There were so many ideas!
+    </p>
+    <br />
+    <p>Create a really intuitive schedule page on the website, paste relevant signage everywhere, announce what's happening in other audis after every talk, play the livestream outside so people know which talk is going on, create a web app that displays..Rahul stopped me right there ruling that there will be no tech solutions one week before the conference.
+    </p><br>
+    <h1 class="text-black text-base font-semibold md:text-2xl">The Festival</h1>
+    <br />
+    <blockquote style="border-left: 4px solid #6A0DAD; padding-left: 16px; color: #333; font-style: italic; margin: 24px 0; background-color: #f9f9f9; padding: 16px; border-radius: 8px;">
+      Wu-Wei - The practice of taking no action that is not in accord with the natural course of the universe. According to the central text of Daoism, the Dao never acts yet nothing is left undone. It means being at peace while engaged in the most frenetic tasks. Something of the meaning of <i>wu wei</i> is captured when we talk of being 'in the zone'.
+    </blockquote>
+    
+    
+    </p>
+    <br />
+    <p>It was different this year, things just seemed to flow. There were no walkie talkies, no megaphones, no team members having a breakdown.
+    </p>
+    <br />
+    <p>We had moved all the project booths upstairs to manage crowd, blocked off the main auditorium entrance to avoid noise inside, and implemented a good number of ideas that had come up during the prep.  Some of the decisions I took were very risky. What if no one even goes upstairs? The venue manager explicitly told us that blocking the entrance is a bad idea.
+      And why the fuck is the registration desk inside??
+    </p>
+    <br />
+    <p>But somehow, all  dots connected and you couldn't tell there were 1500 people in the venue. Every IndiaFOSS veteran (Vinay and Vishnu are my favorites!) I met told me it felt very calm. The first floor was jam packed. Even Kailash, whom you can usually locate very easily since he has such a big crowd around him was nowhere to be found.
+    </p>
+    <br />
+    <p>I said to myself we did a pretty good job. Or we got a bit lucky. Rushabh said that the community is now familiar with the event. Maybe it's a little bit of all of these things.
+    </p>
+    <br />
+    <p>Vishnu was talking about his journey of building Ente, an end to end encrypted google photos alternative. I could hear the sadness in his voice when he talked about the feedback he got from YC. Something about the people whom you look up to telling you that your hardwork was useless, but how these interactions are still important. The next day someone I had looked up to for a long time jokingly said to me that we are all wasting our time.
+    </p>
+    <br />
+    <p>I was very excited about Bowrna's talk. She had spoken at one of our Chennai meetups last year and left a lot of attendees inspired. Her journey has been nothing short of phenomenal. Imagine my surprise when I got to know that she is now contributing to listmonk and building Frappe apps!
+    </p>
+    <br />
+    <p>Day 2 was fun too. I met a few sponsors who were earlier worried about visibility because of their booths' placement. They were exhausted. Shrey told me he hadn't talked that much since the last 2 years than he did on that day. Ushan was disappointed that a couple of orders didn't go through because of poor network at the venue. ( I chuckled thinking of the orders that did go through! )
+    </p>
+    <br />
+    <p>There are very few organisations that create quality FOSS projects and support the movement in India, and ensuring their (open source) projects get eyeballs is a shared goal, regardless of if they give us money.
+    </p>
+    <br />
+    <p>I was more active (or just less tired) on day 2 and got to talk to a bunch of people at the event, and everyone seemed to be having fun, maybe except for Shree. We really need to get him his all day coffee next year.
+    </p>
+    <br />
+    <p>We wrapped the day up with an open mic which felt different from last year. Rahul was standing alone answering questions that felt generic but were targeted at specific instances. He gave some really good (and some really long!) answers and it seemed like the tension had melt.
+    </p>
+    <br />
+    <p>We had chats about governance, future plans, big picture stuff that night. Vishal suggested for employees to finally stop working on weekends. We were talking about work life balance at 1am!
+    </p><br>
+    <h1 class="text-black text-base font-semibold md:text-2xl">What's next</h1>
+    <br />
+    <p>I don't know. Maybe I got lucky, but I don't feel scarred by this event. I feel rather good. In fact, 3 days before the conference even the anxiety seemed to have vanished. I was just listening to Pale Blue Dot on loop.
+    </p>
+    <br />
+    <p>Would I do this all over again if I had the chance? Absolutely. 
+      <br><br>
+      Will I do it next year?  
+      FOSS is a pay it forward movement, so I'd love for a newer face to organise this "festival".  I truly think this is an experience of a lifetime. So probably not. Unless, it needs to be done.
+    </p>
+    <br>
+    Ansh
+
+
+
+
+  </PageSection>
+  <Footer />
+</Layout>
+
