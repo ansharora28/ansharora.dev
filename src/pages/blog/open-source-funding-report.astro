@@ -1,0 +1,221 @@
+---
+import Hero from "../../components/Hero.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/footer.astro";
+import PageSection from "../../layouts/PageSection.astro";
+
+const postTitle =
+  "Opinionated summary of the 2024 Open Source Software Funding Report";
+const postSlug = "open-source-funding-report";
+const postDate = "2024-11-20";
+const postDescription =
+  "This is a summary of the 2024 Open Source Software Funding Report conducted by Github, Linux Foundation and researchers from Harvard University";
+
+// };
+---
+
+<Hero title={postTitle} />
+
+<Layout title={postTitle} description={postDescription}>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">{postTitle}</h1>
+    <p>Published on: {postDate}</p>
+  </PageSection>
+  <PageSection>
+    <h1 class="text-black text-base font-semibold md:text-2xl">Introduction</h1>
+    <br />
+    <p>
+      <br />
+      This is a summary of the <a href="https://opensourcefundingsurvey2024.com/" style="color: blue;"> Open Source Software Funding Report </a> (which is
+      a summary of the <a href="https://opensourcefundingsurvey2024.com/oss_funding_survey_copy.pdf" style="color: blue;"> Open Source Software Funding Survey </a>conducted by Github,
+      Linux Foundation and researchers from Harvard University) published on 19 November,
+      2024
+      <br /><br />
+      Also check out the <a href="https://github.com/sboysel/open-source-funding-toolkit" style="color: blue;"> Open Source funding toolkit</a> that has been developed using
+      insights from this report; and the <a href="https://github.blog/news-insights/company-news/announcing-github-secure-open-source-fund/"> Secure Open Source fund</a> announced
+      on the same day.
+    </p>
+    <br />
+    <h1 class="text-black text-base font-semibold md:text-2xl">
+      About the survey
+    </h1>
+    <br />
+    <p>
+      <blockquote
+        style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;"
+      >
+        The primary audience for the survey included OSPOs, Heads of Engineering
+        and Product, C-Level Executives, and other individuals with a solid
+        understanding of their organization's open source engagement.
+      </blockquote>
+      <br />
+      Most surveys that we have come across so far are from publicly available contributions
+      data, while the findings here are self reported (by organisations that are
+      active in/ care about open source. More on this later).
+      <br />
+      <blockquote
+        style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;"
+      >
+        <h2 class="text-black text-base font-semibold md:text-xl">Scale</h2><br
+        />
+        <ul>
+          <li>
+            - Organizations contribute $7.7 billion USD annually to open source
+            software
+          </li>
+          <li>- The majority (86%) of contribution value is employee labor</li>
+        </ul>
+      </blockquote>
+      I was very curious on how "employee labor" from organisations all over the
+      world with different working schedules, PPP etc. was converted to a particular
+      dollar value.
+    </p>
+    <br /><br />
+    <img src="/value.png" alt="formula to calculate value" />
+    <p>
+      You can read in detail about the approach <a
+        href="https://opensourcefundingsurvey2024.com/#appendix-measuring-labor"
+        style="color: blue">here</a
+      >.
+    </p>
+    <br />
+    <p>
+      Note that the (159) survey respondents collectively contribute $1.7
+      billion annually. The survey has then extrapolated this amount to all
+      organisations that are active in OSS.
+      <br />
+      <blockquote
+        style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;"
+      >
+        <b>
+          How can the contribution value from the survey be scaled up for all
+          organizations? <br />
+        </b>
+        Our survey was targeted towards organizations most likely to support open
+        source. Simply scaling up the total value represented within the survey to
+        match an estimate of the total number of organizations who participate in
+        OSS is likely to overestimate the total value of contribution. To correct
+        this bias, we use a calibrated bootstrap procedure to account for the fact
+        that our survey likely is skewed towards large contributors. We describe
+        our extrapolation methodology in detail in the appendix.
+      </blockquote>
+      <br>
+      <blockquote
+        style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;"
+      >
+      We begin with a sample of organization-affiliated commits to public GitHub repositories from April 2022 through April 2023. Individual commits can be matched to organizations by linking the domain name of the commit author's email address to organizations domain, under the assumption that that employee is contributing to open source as on behalf of their employer. We next use this sample to approximate how many organizations contribute to open source each year.
+      </blockquote>
+      <br />
+      They focus too much analysing where contributions (labor/code) are coming from. This feels weird because we usually look at these studies from a financial contribution point of view and not commits. But well, 86% of contributions is employee labor so I can't blame the authors.
+    </p><br>
+    <img src="/financial-distribution.png" alt="distribution of financial contributions - $287mn" />
+    <p>
+      This is my favorite insight from the study. 57% of the reported financial contributions by organisations are going towards contractors (specialists who do open source work).
+      <br /><br>
+What this means is for most organisations, open source contributions are either "in-house" or hiring specialists who do open source work for them. Just to reiterate, a majority of the already miniscule financial contributions are NOT going to projects/maintainers
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      After contractors, organizations support bounty platforms, foundations, communities, projects, and individual maintainers.
+    </blockquote>
+    16% contributions go towards foundations and 4% towards communities. Most foundation contributions are basically memberships to orgs like the Linux Foundation, which may come with their own perks.
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      <b>Blind spots for funding specifics</b><br>
+      Organizations have a great sense of why they contribute to OSS but seem unlikely to describe the value of this investment in refined detail. This is revealed by a dropoff in relative response rates for questions about funding specifics.
+    </blockquote>
+    From my experience talking to folks in at least the Indian ecosystem, I would rather modify this statement to
+<br />
+"Organizations love talking about why they love open source but usually find it difficult to put money where their mouth is."
+<br><br>
+There obviously are outliers and I agree that labor is a critical blind spot, and it's difficult to evaluate contributions in terms of employee labor. That in my view is another reason to just financially contribute to projects they thrive on.
+    </p>
+<br /><br>
+    <h2 class="text-black text-base font-semibold md:text-2xl">Detailed findings</h2><br>
+    <h2 class="text-black text-base font-semibold md:text-xl">Code Contribution</h2>
+    <br>
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      Organizations are most likely to contribute to repositories that they directly manage (38%) but a close second are projects that are upstream dependencies (34%).
+    </blockquote><br>
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      Organizations are more likely to contribute in the form of bug reports (19%), features (19%), general maintenance (18%), documentation (16%) than they are to contribute by providing governance (7%), cybersecurity audits (6%), and legal advice (3%).    </blockquote>
+  </blockquote>
+    <br />
+    <p>The lack of audits shows that security in OSS is not really a priority for organisations (outside of bug reports and features)</p>
+    <br />
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      OSS work is more likely to be part of the employee’s job (52%) than the entire job (31%).  </blockquote>
+    <br />
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      Organizations do not seem to cite excessive contribution “red tape”: most employees can contribute without explicit approval (38%) or as long as it doesn't interfere with core work (33%).  </blockquote>
+    <br />
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      Most organizations (77%) do not pay more for open source contributions above and beyond the employee's normal salary.  </blockquote>
+    <br />
+    <p><b>Are there any code contribution activities that are not allowed by your organization?</b>
+      <br>
+      <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+
+
+      Most organizations (43%) do not report any code contribution types that are explicitly forbidden by their org.
+      <br>
+      If they do, contributing to projects with particular licensing requirements seems more likely to be prohibited (25%) as is contributing to projects maintained by competitors (10%).
+        </blockquote>
+    <br />
+    There don't seem to be any major restrictions except contributing to projects with complicated CLAs, bureaucracy or something that discloses company IP.
+    </p>
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      Some organizations in regulated industries like financial services outright prohibit open source contributions!
+    </blockquote>
+    Just another instance of Zerodha setting a good example.
+    <br /><br>
+    <h2 class="text-black text-base font-semibold md:text-2xl">Non code contribution</h2><br>
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      If respondents make non-code contributions, it's most likely to be through donations (21%), foundation membership (17%), or event sponsorship (14%).
+      <br><br>
+      Breaking the donations category down further, 11% of organizations donate to foundations, non-profits or general funds while 10% donate directly to maintainers or software projects.
+      <br><br>
+      Supporting open source research efforts is another encouraging form of non-code support cited by respondents.
+      <br><br>
+      Providing speakers is the most common form of event sponsorship (30%) relative to financial sponsorship (22%), marketing (19%), logistics support (15%) or content curation (14%).
+      </blockquote><br>
+    <p>
+      The what? I'm glad no organisation so far has offered to “provide speakers” for IndiaFOSS as a sponsorship.
+      <br /><br />
+      <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      If organizations support a foundation, the most cited reason is that the foundation supports open source projects that are useful to them.
+      </blockquote>
+      Even for organisations that just want to give back to open source with no preference for specific projects etc., it makes sense going through this route and having a foundation identify projects to fund and pay them. We have seen this interest from some sponsors/partners through the FOSS United <a href="fossunited.org/grants">grants program.</a>
+    </p>
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+      What is the value of providing speakers for events? For logistics support or content curation? Unless respondents factored these services in when answering questions about non-code contribution levels, the survey might still be undercounting this potentially valuable form of contribution.
+    </blockquote>
+    <br>     
+    <p>I refuse to assign any value to these. This is volunteering at best.
+    <blockquote
+      style="border-left: 4px solid #ccc; padding-left: 16px; color: #555; font-style: italic; margin: 16px 0;">
+    Top cited reasons for contributing to open source: concern for project sustainability (10%), giving back (10%), innovation (9%)
+    <br>
+    - Small organizations demonstrate a stronger concern for project sustainability and a desire to give back.
+    <br>
+    - Large organizations seem to place more emphasis on risk mitigation, desire to promote standards and interoperability.
+    </blockquote>
+    <h2 class="text-black text-base font-semibold md:text-2xl">Final thoughts</h2>
+<br>
+
+It's definitely interesting to see a self reported study on OSS contributions. I was definitely hoping for more insights on financial contributions than dollar values attached to employees working on OSS - which is in no way a lesser contribution, just not a very accurate representation of "the state of open source funding" in my opinion.
+
+
+    </p> 
+  </PageSection>
+  <Footer />
+</Layout>
