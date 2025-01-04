@@ -6,44 +6,61 @@ MenuIcon,
 } from "astro-navbar";
 const pageTitle = "Ansh Arora";
 ---
-<header class="bg-white lg:flex lg:justify-between lg:items-center p-5 gap-5 mx-auto container text-lg md:text-xl font-normal">
-   <Astronav closeOnClick>
-      <div class="flex w-full lg:w-auto justify-between items-center sm:justify-center">
-         <a class="text-xl lg:text-2xl lg:ml-0 transition-all duration-1000 animate-color-change" href="/">{pageTitle}</a>
-         <div class="block lg:hidden">
-            <MenuIcon class="w-6 h-6 text-gray-800 cursor-pointer" />
+
+<header>
+   <!-- Banner at the top -->
+   <div id="banner" class="bg-yellow-300 text-black text-center py-2 px-4 text-sm md:text-base">
+      <p>
+         I have moved my website/blog to <a href="https://ansharora.in" class="font-bold underline hover:text-blue-600">ansharora.in</a>. This domain is no longer active or updated.
+         <button id="close-banner" class="ml-4 text-gray-800 font-bold bg-yellow-400 px-2 py-1 border rounded hover:bg-yellow-500">Dismiss</button>
+      </p>
+   </div>
+
+   <!-- Main Header -->
+   <div class="bg-white lg:flex lg:justify-between lg:items-center p-5 gap-5 mx-auto container text-lg md:text-xl font-normal">
+      <Astronav closeOnClick>
+         <div class="flex w-full lg:w-auto justify-between items-center sm:justify-center">
+            <a class="text-xl lg:text-2xl lg:ml-0 transition-all duration-1000 animate-color-change" href="/">{pageTitle}</a>
+            <div class="block lg:hidden">
+               <MenuIcon class="w-6 h-6 text-gray-800 cursor-pointer" />
+            </div>
          </div>
-      </div>
-      <MenuItems class="hidden lg:flex lg:items-center">
-         <ul class="flex flex-col lg:flex-row lg:gap-5">
-            <li>
-               <a href="/" class="text-gray-800 hover:text-green-500">Home</a>
-            </li>
-            <li>
-               <a href="/talks" class="text-gray-800 hover:text-green-500">Talks</a>
-            </li>
-            <li>
-               <a href="/reccos" class="text-gray-800 hover:text-green-500">Reccos</a>
-            </li>
-            <li>
-               <a href="/blog" class="text-gray-800 hover:text-green-500">Blog</a>
-            </li>
-         </ul>
-      </MenuItems>
-   </Astronav>
- </header>
- 
+         <MenuItems class="hidden lg:flex lg:items-center">
+            <ul class="flex flex-col lg:flex-row lg:gap-5">
+               <li>
+                  <a href="/" class="text-gray-800 hover:text-green-500">Home</a>
+               </li>
+               <li>
+                  <a href="/talks" class="text-gray-800 hover:text-green-500">Talks</a>
+               </li>
+               <li>
+                  <a href="/reccos" class="text-gray-800 hover:text-green-500">Reccos</a>
+               </li>
+               <li>
+                  <a href="https://ansharora.in/blog" class="text-gray-800 hover:text-green-500">Blog</a>
+               </li>
+            </ul>
+         </MenuItems>
+      </Astronav>
+   </div>
+</header>
 
 <style>
    @keyframes change-color {
-  0% { color: red; }
-  25% { color: blue; }
-  50% { color: green; }
-  75% { color: orange; }
-  100% { color: purple; }
-}
+      0% { color: red; }
+      25% { color: blue; }
+      50% { color: green; }
+      75% { color: orange; }
+      100% { color: purple; }
+   }
 
-.animate-color-change {
-  animation: change-color 5s infinite;
-}
+   .animate-color-change {
+      animation: change-color 5s infinite;
+   }
 </style>
+
+<script>
+   document.getElementById('close-banner').addEventListener('click', function() {
+      document.getElementById('banner').style.display = 'none';
+   });
+</script>
